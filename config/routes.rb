@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  get 'cocktails/show'
 
-  get 'cocktails/index'
+  root "cocktails#index"
 
-  get 'cocktails/edit'
-
-  get 'cocktails/new'
-
+  resources :cocktails do
+    resources :doses, only: [:new, :destroy]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
