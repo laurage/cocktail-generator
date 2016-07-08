@@ -1,7 +1,4 @@
 <h1>Add a cocktail</h1>
 
-<% simple_form_for (@cocktail) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<%= render 'form' %>
+<%= link_to 'Back', cocktails_path %>

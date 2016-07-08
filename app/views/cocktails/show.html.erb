@@ -1,2 +1,21 @@
 <h1><%= @cocktail.name %></h1>
 
+<h2>Ingredient list:</h2>
+
+<% @cocktail.doses.each do |d| %>
+  <p><%= d.description %> - <%= d.ingredient.name %></p>
+<% end %>
+
+<% @cocktail.ingredients.each do |ingredient| %>
+  <p><%= ingredient.name %> - <%= ingredient.name %> </br></p>
+<% end %>
+
+<h2>Add a dose of an ingredient</h2>
+<%= simple_form_for ([@cocktail, @dose]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, collection: Ingredient.all, prompt: "Select an ingredient " %>
+  <%= f.button :submit %>
+<% end %>
+
+

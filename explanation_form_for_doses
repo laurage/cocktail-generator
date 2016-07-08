@@ -1,0 +1,26 @@
+explanation_form_for_doses:
+
+
+def simple_form_for ([arg1, arg2])
+  a = "arg1.class.name.downcase+"s/" -> cocktails/
+  if arg2.id.nil?
+     -> on veut créer une dose -> b = arg2.class.name.downcase+"s -> "doses"
+     return a + arg1.id + b -> (post cocktails/2/doses)
+   else
+     -> (patch coktails/2/doses/1)
+end
+
+
+->
+Vue COcktail j'ai envie d ecréer une dose
+don je me fais un formulaire pour créer unde dose
+<%= simple_form_for(@dose)
+! comme je voulais nester mes doses dans le coktails -> routes chelou? -> rake routes
+-> doses#create: cokatils/cokatil_id/doses
+
+<%= simple_form_for([@coktail, @dose]) do |f| %>
+->coktails#show
+cocktails_controlerr
+def show
+-> @cocktail
+-> @dose
